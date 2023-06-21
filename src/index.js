@@ -5,6 +5,7 @@ const app = express();
 const cors = require('cors')
 const Dish = require('./model/dish');
 const Header = require('./model/header');
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json())
@@ -83,6 +84,6 @@ app.get('/dishes/:id', (req, res) => {
 
 
 
-app.listen(3000,()=>{
-    console.log('listening on port 3000') 
+app.listen(port,()=>{
+    console.log(`listening on ${port}`) 
 })
