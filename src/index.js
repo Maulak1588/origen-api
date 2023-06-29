@@ -5,7 +5,7 @@ const app = express();
 const cors = require('cors')
 const Dish = require('./model/dish');
 const Header = require('./model/header');
-const port = process.env.PORT || 3000;
+const port = /*process.env.PORT || */3000;
 
 app.use(cors());
 app.use(express.json())
